@@ -1,0 +1,337 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body onload="init()">
+	<section class="score">
+		<div>
+			<h1>Score</h1>
+			<h2><span class="score_percent"></span>%</h2>
+			<p><span class="current_score"></span> / <span class="max_score"></span></p>
+		</div>
+	</section>
+	<section class="main-wrapper">
+		<div>
+			<div class="Q question Q1">
+				<h2>Which of the following elements aren't introduced in HTML5?</h2>
+			</div>
+			<div class="Q question Q2">
+				<h2>Which element(s) does the hgroup element contain?</h2>
+			</div>
+			<div class="Q question Q3">
+				<h2>Which HTML5 element would you use to organise content so that the page maximises a search engines's algorithm?</h2>
+			</div>
+			<div class="Q question Q4">
+				<h2>Which HTML5 element should you use to create a more structured layout?</h2>
+			</div>
+			<div class="Q question Q5">
+				<h2>Which of the following JavaScript methods can't be used to select an element in the DOM?</h2>
+			</div>
+			<div class="Q question Q6">
+				<h2>Which of the following JavaScript lines succesfully retrieves only the image element with the ID <i>myDog</i> from the following HTML?</h2>
+				<div class="code">
+					<span style="color: #007700">&lt;form&gt;</span><br>
+					<span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;main&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;mainStyle&quot;</span><span style="color: #007700">&gt;</span><br>
+					<span style="color: #007700">&lt;p</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;dogs&quot;</span><span style="color: #007700">&gt;</span><br>
+					This is a webpage about dogs. Here is my dog picture:
+					<span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;dog.jpg&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;myDog&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;thumb&quot;</span><span style="color: #007700">/&gt;</span><br>
+					Here is a picture of my friend&#39;s dog:
+					<span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;dog.jpg&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;myfriendsDog&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;thumb&quot;</span><span style="color: #007700">/&gt;</span><br>
+					<span style="color: #007700">&lt;/p&gt;</span><br>
+					<span style="color: #007700">&lt;/div&gt;</span><br>
+					<span style="color: #007700">&lt;/form&gt;</span><br>
+				</div>
+			</div>
+			<div class="Q question Q7">
+				<h2>To hide a elements in the DOM and still be able to add it back later, what should you do?</h2>
+			</div>
+			<div class="Q question Q8">
+				<h2>When implementing the HTML5 video element, how do you ensure that the rendering of the element in different browsers?</h2>
+			</div>
+			<div class="Q question Q9">
+				<h2>When drawing on the HTML5  &lt;<i>canvas</i>&gt; element, what method is used on the context to begin drawing at a new point?</h2>
+			</div>
+			<div class="Q question Q10">
+				<h2>When performance is critical for a new HTML5 graphics application, what should you use?</h2>
+			</div>
+			<div class="Q question Q11">
+				<h2>Absolute Positioning positions an object relative to what?</h2>
+			</div>
+			<div class="Q question Q12">
+				<h2>Which transformation enables you to change the size of an element?</h2>
+			</div>
+			<div class="Q question Q13">
+				<h2>Which syntax preserves the layout of a page wheen hiding an element in the DOM?</h2>
+			</div>
+			<div class="Q question Q14">
+				<h2>When using the Web Storage API, where should you store data to ensure that it's cleared when the user closes the browser?</h2>
+			</div>
+			<div class="Q question Q15">
+				<h2>What do you need to do to designate a page as available offline?</h2>
+			</div>
+			<div class="Q question Q16">
+				<h2>Which of the following aren't valid in the AppCache manifest?</h2>
+			</div>
+			<div class="Q question Q17">
+				<h2>Which event is fired by the AppCache object when the cache download is complete?</h2>
+			</div>
+			<div class="Q question Q18">
+				<h2>When using the geolocation API, how do you know configure the ability to use cached data?</h2>
+			</div>
+		</div>
+		<div>
+			<div class="question Q1">
+				<p class="answer">A. &lt;article&gt;</p>
+				<p class="answer">B. &lt;footer&gt;</p>
+				<p class="answer">C. &lt;hgroup&gt;</p>
+				<p class="answer correct">D. &lt;input&gt;</p>
+			</div>	
+			<div class="question Q2">
+				<p class="answer correct">A. &lt;h1&gt; to &lt;h6&gt;</p>
+				<p class="answer">B. &lt;header&gt;</p>
+				<p class="answer">C. &lt;nav&gt;</p>
+				<p class="answer">D. All of the above</p>
+			</div>
+			<div class="question Q3">
+				<p class="answer">A. &lt;div id="CompanyNews"&gt;</p>
+				<p class="answer">B. &lt;header&gt;Company News&lt;/header&gt;</p>
+				<p class="answer correct">C. &lt;article&gt;Company News&lt;/article&gt;</p>
+				<p class="answer">D. All of the above </p>
+			</div>
+			<div class="question Q4">
+				<p class="answer">A. &lt;div&gt;</p>
+				<p class="answer">B. &lt;p&gt;</p>
+				<p class="answer correct">C. &lt;table&gt;</p>
+				<p class="answer">D. &lt;form&gt;</p>
+			</div>
+			<div class="question Q5">
+				<p class="answer">A. <i>getElementById</i></p>
+				<p class="answer">B. <i>querySelector</i></p>
+				<p class="answer">C. <i>getElementByClassName</i></p>
+				<p class="answer correct">D. <i>queryAll</i></p>
+			</div>
+			<div class="question Q6">
+				<p class="answer correct">A. document.getElementById('myDog');</p>
+				<p class="answer">B. &lt;p&gt;.getChildNode('img');</p>
+				<p class="answer">C. domcument.getElementById('dogs').querySelector('thumb');</p>
+				<p class="answer">D. document.querySelectorAll('thumb');</p>
+			</div>
+			<div class="question Q7">
+				<p class="answer">A. Nothing, because DOM elements are always avilable in static form.</p>
+				<p class="answer correct">B. Keep a reference to the removed node to be able to add it back.</p>
+				<p class="answer">C. Call the <i>document.restoreNodes</i> method.</p>
+				<p class="answer">D. You can't add an element back after its been removed.</p>
+			</div>
+			<div class="question Q8">
+				<p class="answer">A. You need nothing, because HTML5 is now standard specification</p>
+				<p class="answer">B. Specify all the source video types in the <i>src</i> attribute of the video element.</p>
+				<p class="answer correct">C. Include the &lt;<i>source</i>&gt; element for each video type so that each browser can play the version that it supports.</p>
+				<p class="answer">D. Include the &lt;<i>object</i>&gt; element for each video type so that each browser can play the version that it supports.</p>
+			</div>
+			<div class="question Q9">
+				<p class="answer">A. <i>moveTo</i></p>
+				<p class="answer">B. <i>lineAt</i></p>
+				<p class="answer correct">C. <i>beginPath</i></p>
+				<p class="answer">D. <i>stroke</i></p>
+			</div>
+			<div class="question Q10">
+				<p class="answer">A. &lt;<i>canvas</i>&gt; using declarative syntax to create the graphics.</p>
+				<p class="answer">B. &lt;<i>svg</i>&gt; using declarative syntax to create the graphics.</p>
+				<p class="answer correct">C. &lt;<i>canvas</i>&gt; using JavaScriptto create graphics.</p>
+				<p class="answer">D. &lt;<i>svg</i>&gt; and &lt;<i>canvas</i>&gt; combination to leverage the best performance of both.</p>
+			</div>
+			<div class="question Q11">
+				<p class="answer">A. The top left corner of the browser window.</p>
+				<p class="answer correct">B. The top left corner of its parent element.</p>
+				<p class="answer">C. Centered inside the window.</p>
+				<p class="answer">D. Centered inside its parent element.</p>
+			</div>
+			<div class="question Q12">
+				<p class="answer">A. <i>rotate</i></p>
+				<p class="answer">B. <i>skew</i></p>
+				<p class="answer">C. <i>translate</i></p>
+				<p class="answer correct">D. <i>scale</i></p>
+			</div>
+			<div class="question Q13">
+				<p class="answer">A. display='hidden'</p>
+				<p class="answer">B. display='inline'</p>
+				<p class="answer">C. visibility='none'</p>
+				<p class="answer correct">D. visibility='hidden'</p>
+			</div>
+			<div class="question Q14">
+				<p class="answer">A. <i>localStorage</i></p>
+				<p class="answer">B. <i>cookieStorage</i></p>
+				<p class="answer correct">C. <i>sessionStorage</i></p>
+				<p class="answer">D. A hidden input element</p>
+			</div>
+			<div class="question Q15">
+				<p class="answer">A. Specify the JavaScript as document.offline=true.</p>
+				<p class="answer">B. Specify the manifest attribute on the form element.</p>
+				<p class="answer correct">C. Specify the manifest attribute on the HTML element.</p>
+				<p class="answer">D. Tell users to switch to offline mode using their browsers.</p>
+			</div>
+			<div class="question Q16">
+				<p class="answer">A. Cache manifest</p>
+				<p class="answer correct">B. Session manifest</p>
+				<p class="answer">C. Network manifest</p>
+				<p class="answer">D. Fallback manifest</p>
+			</div>
+			<div class="question Q17">
+				<p class="answer correct">A. <i>oncached</i></p>
+				<p class="answer">B. <i>onupdateready</i></p>
+				<p class="answer">C. <i>ondownloading</i></p>
+				<p class="answer">D. <i>onchecking</i></p>
+			</div>
+			<div class="question Q18">
+				<p class="answer">A. Set the <i>enableCache</i> property to true on the <i>positionsOptions</i> object.</p>
+				<p class="answer correct">B. Set the <i>maximumAge</i> property to a non-zero value on the <i>positionOptions object.</i></p>
+				<p class="answer">C. Set the timeout property of the <i>positionsOptions object.</i></p>
+				<p class="answer">D. Using the cache is always on to save bandwidth, so no configuration is required.</p>
+			</div>
+		</div>
+	</section>
+	<div class="dots">
+		<div class="dot"></div>	
+	</div>
+</body>
+
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: helvetica;
+		box-sizing: border-box; 
+		overflow: hidden;	
+	}
+
+	.score{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		background: #f0f;
+		top: -100%;
+		transition: 1s all ease;
+		z-index: 9999999;
+	}
+
+	.dots{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 12px;
+		width: 100%;
+		z-index: 999;
+		background: lightgrey;
+	}
+
+	.dot{
+		height: 100%;
+		background: red;
+		width: 0;
+		transition: 0.3s all ease;
+	}
+
+	.score > div{
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	.main-wrapper{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.main-wrapper > div{
+		display: flex;
+		flex: 4;
+		box-sizing: border-box;	
+	}
+
+	.main-wrapper > div:nth-child(1){
+		background: navy;
+		flex: 3;
+		color: white;
+	}
+
+	.main-wrapper > div:nth-child(1) > div{
+		width: 60%;
+		margin: auto 0 auto auto;
+		display: none;
+	}
+
+	.main-wrapper .code{
+		background: lightgrey;
+		padding: 1rem;
+		margin-right: 1rem;
+	}
+	.main-wrapper > div:nth-child(2) > div {
+		margin: auto auto auto 0;
+		display: none;
+		position: relative;
+	}
+
+	h2{
+		padding: 0 1rem;
+	}
+
+	p{
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		padding: 0.5rem;
+		transition: 0.3s all ease;
+		cursor: pointer;
+	}
+
+	p:first-letter{
+		font-weight: bold;
+	}
+
+	p:hover{
+		background: navy;
+		color: white;
+	}
+
+	.current_score{
+		font-weight: bold;
+	}
+
+	
+</style>
+
+<script type="text/javascript">
+	var current_question = 1;
+	var score = 0;
+	var max_length = $('.Q').length; 
+
+	function init(){
+		console.log(max_length);
+		$('.Q1').fadeIn();
+	}
+
+	$('.answer').click( function(){
+		if ( $(this).hasClass('correct') ) {
+			score ++;
+		}
+
+		current_question ++;
+
+		$('.dot').css('width',((current_question/(max_length + 1))*100)+ '%');
+
+		$('.question').fadeOut();
+
+		$('.Q' + current_question.toString()).delay(400).fadeIn();
+
+		if ( (current_question - 1) >= max_length ) {
+			$('.score_percent').html((score/max_length)*100);
+			$('.current_score').html(score);
+			$('.max_score').html(max_length);
+			$('.score').css('top','0');
+		}
+	})
+</script>
