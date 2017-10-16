@@ -3,6 +3,9 @@
 </head>
 
 <body onload="init()">
+	<section class="overlay">
+		
+	</section>
 	<section class="score">
 		<div>
 			<h1>Score</h1>
@@ -31,12 +34,12 @@
 				<h2>Which of the following JavaScript lines succesfully retrieves only the image element with the ID <i>myDog</i> from the following HTML?</h2>
 				<div class="code">
 					<span style="color: #007700">&lt;form&gt;</span><br>
-					<span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;main&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;mainStyle&quot;</span><span style="color: #007700">&gt;</span><br>
-					<span style="color: #007700">&lt;p</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;dogs&quot;</span><span style="color: #007700">&gt;</span><br>
-					This is a webpage about dogs. Here is my dog picture:
-					<span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;dog.jpg&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;myDog&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;thumb&quot;</span><span style="color: #007700">/&gt;</span><br>
-					Here is a picture of my friend&#39;s dog:
-					<span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;dog.jpg&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;myfriendsDog&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;thumb&quot;</span><span style="color: #007700">/&gt;</span><br>
+					<span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span>&quot;main&quot;</span> <span style="color: #0000CC">class=</span><span>&quot;mainStyle&quot;</span><span style="color: #007700">&gt;</span><br>
+					<span style="color: #007700">&lt;p</span> <span style="color: #0000CC">id=</span><span>&quot;dogs&quot;</span><span style="color: #007700">&gt;</span><br>
+					This is a webpage about dogs. Here is my dog picture:<br>
+					<span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span>&quot;dog.jpg&quot;</span> <span style="color: #0000CC">id=</span><span>&quot;myDog&quot;</span> <span style="color: #0000CC">class=</span><span>&quot;thumb&quot;</span><span style="color: #007700">/&gt;</span><br>
+					Here is a picture of my friend&#39;s dog:<br>
+					<span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span>&quot;dog.jpg&quot;</span> <span style="color: #0000CC">id=</span><span>&quot;myfriendsDog&quot;</span> <span style="color: #0000CC">class=</span><span>&quot;thumb&quot;</span><span style="color: #007700">/&gt;</span><br>
 					<span style="color: #007700">&lt;/p&gt;</span><br>
 					<span style="color: #007700">&lt;/div&gt;</span><br>
 					<span style="color: #007700">&lt;/form&gt;</span><br>
@@ -77,6 +80,24 @@
 			</div>
 			<div class="Q question Q18">
 				<h2>When using the geolocation API, how do you know configure the ability to use cached data?</h2>
+			</div>
+			<div class="Q question Q19">
+				<h2>The main content section must be set to two times the width of the advertising sections.<br>
+					The layout must be specified by using the CSS3 flexible box model.<br>
+					You need to ensure that the visual layout of the page meets the requirements.<br>
+					Which CSS3 property should you use?</h2>
+			</div>
+			<div class="Q question Q20">
+				<h2>An inner paragraph must be exactly 15px away from the top left corner of a relatively positioned element. Which position value should you use?</h2>
+			</div>
+			<div class="Q question Q21">
+				<h2>In JavaScript, how do you determine the scop of a variable?</h2>
+			</div>
+			<div class="Q question Q22">
+				<h2>Why is it important to avoid creating custom JavaScript object in the global namespace?</h2>
+			</div>
+			<div class="Q question Q23">
+				<h2>What JavaScript keyword in an event handler can be easily used to reference the object that raised the event?</h2>
 			</div>
 		</div>
 		<div>
@@ -188,6 +209,34 @@
 				<p class="answer">C. Set the timeout property of the <i>positionsOptions object.</i></p>
 				<p class="answer">D. Using the cache is always on to save bandwidth, so no configuration is required.</p>
 			</div>
+			<div class="question Q19">
+				<p class="answer">A. box-orient</p>
+				<p class="answer">B. box-flex-group</p>
+				<p class="answer correct">C. box-flex</p>
+				<p class="answer">D. box-direction</p>
+			</div>
+			<div class="question Q20">
+				<p class="answer correct">A. absolute</p>
+				<p class="answer">B. static</p>
+				<p class="answer">C. fixed</p>
+				<p class="answer">D. relative</p>
+			</div>
+			<div class="question Q21">
+				<p class="answer">A. The scope of a variable is global within the context of the page.</p>
+				<p class="answer correct">B. The scope of a variable depends on where  inside the script it's declared.</p>
+				<p class="answer">C. The scope of a variable changes depending on the type it represents.</p>
+			</div>
+			<div class="question Q22">
+				<p class="answer">A. The global namespace is reserved for the browser</p>
+				<p class="answer correct">B. The global namespace is available for to all applications in the session, and using it could result in a naming conflict.</p>
+				<p class="answer">C. The global namespace creates a security risk to all user's systems.</p>
+			</div>
+			<div class="question Q23">
+				<p class="answer">A. The <i>it</i> provides a reference to the object.</p>
+				<p class="answer">B. The <i>document.current</i> provides a reference to the object.</p>
+				<p class="answer correct">C. The <i>this</i> provides a reference to the object.</p>
+				<p class="answer">D. No way is available other than to use a selector query to retrieve the object from the DOM</p>
+			</div>
 		</div>
 	</section>
 	<div class="dots">
@@ -199,9 +248,18 @@
 	body{
 		margin: 0;
 		padding: 0;
-		font-family: helvetica;
+		font-family: "Comic Sans MS", cursive, sans-serif;
 		box-sizing: border-box; 
 		overflow: hidden;	
+	}
+
+	.overlay{
+		z-index: 99999999999;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255,255,255,0);
 	}
 
 	.score{
@@ -308,10 +366,30 @@
 	var current_question = 1;
 	var score = 0;
 	var max_length = $('.Q').length; 
+	var question_index = [];
 
 	function init(){
 		console.log(max_length);
-		$('.Q1').fadeIn();
+	
+		$('.overlay').fadeOut(1)
+
+		create_array();
+
+		$('.Q' + question_index[current_question.toString()]).fadeIn();
+	}
+
+	function create_array(){
+		var current_index = 1;
+
+		while ( current_index < max_length + 1 ) {
+			question_index.push(current_index);
+
+			current_index ++;
+		}
+
+		question_index.sort(function(a, b){return 0.5 - Math.random()});
+
+		console.log(question_index);
 	}
 
 	$('.answer').click( function(){
@@ -321,13 +399,15 @@
 
 		current_question ++;
 
-		$('.dot').css('width',((current_question/(max_length + 1))*100)+ '%');
+		$('.dot').css('width',((current_question/max_length)*100)+ '%');
 
 		$('.question').fadeOut();
 
-		$('.Q' + current_question.toString()).delay(400).fadeIn();
+		$('.overlay').fadeIn(1).delay(900).fadeOut(1);
 
-		if ( (current_question - 1) >= max_length ) {
+		$('.Q' + question_index[current_question.toString()]).delay(400).fadeIn();
+
+		if ( current_question >= max_length ) {
 			$('.score_percent').html((score/max_length)*100);
 			$('.current_score').html(score);
 			$('.max_score').html(max_length);
