@@ -3,9 +3,7 @@
 </head>
 
 <body onload="init()">
-	<section class="overlay">
-		
-	</section>
+	<section class="overlay"></section>
 	<section class="score">
 		<div>
 			<h1>Score</h1>
@@ -98,6 +96,39 @@
 			</div>
 			<div class="Q question Q23">
 				<h2>What JavaScript keyword in an event handler can be easily used to reference the object that raised the event?</h2>
+			</div>
+			<div class="Q question Q24">
+				<h2>In JavaScript, which of the following isn't a native object?</h2>
+			</div>
+			<div class="Q question Q25">
+				<h2>Which of the following snippets shows the correctway to create a custom book object?</h2>
+			</div>
+			<div class="Q question Q26">
+				<h2>Inheritance is accomplished in JavaScript through the use of which construct?</h2>
+			</div>
+			<div class="Q question Q27">
+				<h2>Which of the following keywords provide iterativef control flow?</h2>
+			</div>
+			<div class="Q question Q28">
+				<h2>Which of the folloing array methods combone two arrays?</h2>
+			</div>
+			<div class="Q question Q29">
+				<h2>Which iterative control syntax can guarantee that the is processed at least once?</h2>
+			</div>
+			<div class="Q question Q30">
+				<h2>Which keyword is used to exit a loop?</h2>
+			</div>
+			<div class="Q question Q31">
+				<h2>Which of the following isn't a supported way to add an event handler to a DOM element?</h2>
+			</div>
+			<div class="Q question Q32">
+				<h2>Which of the following isn't an attribute of an anonymous function?</h2>
+			</div>
+			<div class="Q question Q33">
+				<h2>Which code line would successfully cancel and event?</h2>
+			</div>
+			<div class="Q question Q34">
+				<h2>Which event occurs when a DOM elements revieces the cursor?</h2>
 			</div>
 		</div>
 		<div>
@@ -237,11 +268,77 @@
 				<p class="answer correct">C. The <i>this</i> provides a reference to the object.</p>
 				<p class="answer">D. No way is available other than to use a selector query to retrieve the object from the DOM</p>
 			</div>
+			<div class="question Q24">
+				<p class="answer">A. Function</p>
+				<p class="answer">B. Array</p>
+				<p class="answer">C. Integer</p>
+				<p class="answer correct">D. Person</p>
+			</div>
+			<div class="question Q25">
+				<p class="answer">A. var book = "Title:'My book about things'" + "Author:'Jane Doe'" + "Pages:400";</p>
+				<p class="answer correct">B. var book = {Title: "my book about things", Author: "Jane Doe", Pages: 400};</p>
+				<p class="answer">C. var book = (Title="my book about things", Author="Jane Doe"=Pages:400);</p>
+				<p class="answer">D. var book = new {Title: "my book about things", Author: "Jane Doe", Pages: 400};</p>
+			</div>
+			<div class="question Q26">
+				<p class="answer">A. <i>inherits</i> keyword</p>
+				<p class="answer">B. <i>implements</i> keyword</p>
+				<p class="answer">C. <i>this</i> keyword</p>
+				<p class="answer correct">D. Prototypes</p>
+			</div>
+			<div class="question Q27">
+				<p class="answer">A. <i>if</i> statement</p>
+				<p class="answer">B. <i>switch</i> statement</p>
+				<p class="answer correct">C. <i>for</i></p>
+				<p class="answer">D. <i>break</i></p>
+			</div>
+			<div class="question Q28">
+				<p class="answer">A. <i>join</i></p>
+				<p class="answer">B. <i>combine</i></p>
+				<p class="answer">C. <i>split</i></p>
+				<p class="answer correct">D. <i>concat</i></p>
+			</div>
+			<div class="question Q29">
+				<p class="answer">A. <i>for...in</i> loop</p>
+				<p class="answer">B. <i>while</i> loop</p>
+				<p class="answer correct">C. <i>do...while</i> loop</p>
+				<p class="answer">D. <i>for</i> loop</p>
+			</div>
+			<div class="question Q30">
+				<p class="answer">A. <i>continue</i></p>
+				<p class="answer correct">B. <i>break</i></p>
+				<p class="answer">C. <i>stop</i></p>
+				<p class="answer">D. <i>next</i></p>
+			</div>
+			<div class="question Q31">
+				<p class="answer">A. Declaring within the HTML element by assigning the event attribute to a JavaScript function.</p>
+				<p class="answer correct">B. Setting the attribute in CSS to a valid JavaScript function</p>
+				<p class="answer">C. Dynamically through JavaScript by assigning a JavaScript function to the object's event property.</p>
+				<p class="answer">D. Dynamically through JavaScript via the assign/remove event listener methods.</p>
+			</div>
+			<div class="question Q32">
+				<p class="answer">A. Anonymous functions can't be cancelled by any other code.</p>
+				<p class="answer">B. Anonymous functions have a clearly defined name.</p>
+				<p class="answer">C. Anonymous functions can be passed parameters.</p>
+				<p class="answer correct">D. Anonymous functions can't be assigned to a DOM element declaratively.</p>
+			</div>
+			<div class="question Q33">
+				<p class="answer correct">A. <i>window.event.returnValue = false;</i></p>
+				<p class="answer">B. <i>return false;</i></p>
+				<p class="answer">C. <i>window.event.Return();</i></p>
+				<p class="answer">D. <i>window.Stop();</i></p>
+			</div>
+			<div class="question Q34">
+				<p class="answer correct">A. <i>focus</i></p>
+				<p class="answer">B. <i>change</i></p>
+				<p class="answer">C. <i>keydown</i></p>
+				<p class="answer">D. <i>mouseleave</i></p>
+			</div>
 		</div>
 	</section>
-	<div class="dots">
+	<section class="dots">
 		<div class="dot"></div>	
-	</div>
+	</section>
 </body>
 
 <style>
@@ -351,7 +448,7 @@
 	}
 
 	p:hover{
-		background: navy;
+		background: navy !important;
 		color: white;
 	}
 
@@ -393,19 +490,26 @@
 	}
 
 	$('.answer').click( function(){
+
 		if ( $(this).hasClass('correct') ) {
 			score ++;
 		}
 
 		current_question ++;
 
+		$('.correct').css('background','lime').delay(2000).queue(function(){
+			$(this).css('background','none').dequeue();
+		})
+
+		console.log("hello there");
+
 		$('.dot').css('width',((current_question/max_length)*100)+ '%');
 
-		$('.question').fadeOut();
+		$('.question').delay(2000).fadeOut();
 
-		$('.overlay').fadeIn(1).delay(900).fadeOut(1);
+		$('.overlay').fadeIn(1).delay(2400).fadeOut(1);
 
-		$('.Q' + question_index[current_question.toString()]).delay(400).fadeIn();
+		$('.Q' + question_index[current_question.toString()]).delay(1000).fadeIn();
 
 		if ( current_question >= max_length ) {
 			$('.score_percent').html((score/max_length)*100);
