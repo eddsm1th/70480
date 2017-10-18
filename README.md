@@ -1,3 +1,5 @@
 # 70480
 
-Pls don't inspect
+<p style="color: red;">
+Pls don't inspect :)
+</p>
