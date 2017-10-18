@@ -151,6 +151,21 @@
 			<div class="Q question Q41">
 				<h2>Why is wiring up events with jQuery easier?</h2>
 			</div>
+			<div class="Q question Q42">
+				<h2>Which of the following isn't a valid web worker operation?</h2>
+			</div>
+			<div class="Q question Q43">
+				<h2>Which method cancels a web worker?</h2>
+			</div>
+			<div class="Q question Q44">
+				<h2>Where must you place the JavaScript code to run in the context of a web worker?</h2>
+			</div>
+			<div class="Q question Q45">
+				<h2>How many webworkers/subworkers can you run concurrently?</h2>
+			</div>
+			<div class="Q question Q46">
+				<h2>To have a script run continually every 30 seconds, which line of code should be used?</h2>
+			</div>
 		</div>
 		<div>
 			<div class="question Q1">
@@ -391,10 +406,40 @@
 				<p class="answer">D. <i>url, datatype, oncomplete</i></p>
 			</div>
 			<div class="question Q41">
-				<p class="answer">A. It allows you to assign the event listener to many elements at once via the selector syntax.</p>
+				<p class="answer correct">A. It allows you to assign the event listener to many elements at once via the selector syntax.</p>
 				<p class="answer">B. There is no difference wiring up events with jquery versus <i>addEventListener</i> method.</p>
 				<p class="answer">C. jQuery works more efficiently in a loop.</p>
 				<p class="answer">D. jQuery allows both named and anonymous functions to be used as event listeners.</p>
+			</div>
+			<div class="question Q42">
+				<p class="answer">A. <i>postMessage</i></p>
+				<p class="answer">B. <i>onMessage</i></p>
+				<p class="answer correct">C. <i>close</i></p>
+				<p class="answer">D. <i>terminate</i></p>
+			</div>
+			<div class="question Q43">
+				<p class="answer">A. <i>close</i></p>
+				<p class="answer correct">B. <i>terminate</i></p>
+				<p class="answer">C. <i>suspend</i></p>
+				<p class="answer">D. <i>sleep</i></p>
+			</div>
+			<div class="question Q44">
+				<p class="answer">A. Between the &lt;head&gt;&lt;/head&gt; elements.</p>
+				<p class="answer">B. In any &lt;script&gt; block on the page.</p>
+				<p class="answer correct">C. In its own JavaScript file.</p>
+				<p class="answer">D. As a dynamic function assigned to the self.worker.</p>
+			</div>
+			<div class="question Q45">
+				<p class="answer">A. A multiple of 4 web workers including subworkers per processor.</p>
+				<p class="answer">B. 16 workers by default, but you can change that number via <i>self.configuration</i>.</p>
+				<p class="answer correct">C. A limitless amount of workers</p>
+				<p class="answer">D. A limit ofeight workers, each with a maximum of 8 subworkers.</p>
+			</div>
+			<div class="question Q46">
+				<p class="answer">A. <i>wsConnection.repeatWork("workerFile.js",30000);</i></p>
+				<p class="answer">B. <i>setTimeout(function(){worker.postMessage("");}, 30000);</i></p>
+				<p class="answer">C. <i>setTimeout(worker.postMessage(""), 30000);</i></p>
+				<p class="answer correct">D. <i>setInterval(function(){worker.postMessage("");}, 30000);</i></p>
 			</div>
 		</div>
 	</section>
