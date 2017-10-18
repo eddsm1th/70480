@@ -130,6 +130,15 @@
 			<div class="Q question Q34">
 				<h2>Which event occurs when a DOM elements revieces the cursor?</h2>
 			</div>
+			<div class="Q question Q35">
+				<h2>Which statement correctly describes the proper error handling using <i>try...catch...finally</i> blocks?</h2>
+			</div>
+			<div class="Q question Q36">
+				<h2>Which of the following isn't a property of the exception object?</h2>
+			</div>
+			<div class="Q question Q37">
+				<h2>Why is checking for null a good practice?</h2>
+			</div>
 		</div>
 		<div>
 			<div class="question Q1">
@@ -334,10 +343,26 @@
 				<p class="answer">C. <i>keydown</i></p>
 				<p class="answer">D. <i>mouseleave</i></p>
 			</div>
+			<div class="question Q35">
+				<p class="answer correct">A. Proper error handling allows code processing to continue and to provide appropriate user feedback.</p>
+				<p class="answer">B. Proper error handling allows users to fix problems with the webpage.</p>
+				<p class="answer">C. Proper error handling allows you to debug the application at run time.</p>
+				<p class="answer">D. Proper error handling allows you tosupress all the bugs in your scripts.</p>
+			</div>
+			<div class="question Q36">
+				<p class="answer">A. <i>message</i></p>
+				<p class="answer correct">B. <i>description</i></p>
+				<p class="answer">C. <i>number</i></p>
+				<p class="answer">D. <i>name</i></p>
+			</div>
+			<div class="question Q37">
+				<p class="answer correct">A. Checking for null prevents the use of an object before it's initialized.</p>
+				<p class="answer">B. Checking for null prevents errors resulting in NaN.</p>
+				<p class="answer">C. Checking for null prevents the need to throw exceptions.</p>
+			</div>
 		</div>
 	</section>
 	<section class="dots">
-		<div class="dot"></div>	
 	</section>
 </body>
 
@@ -377,12 +402,13 @@
 		width: 100%;
 		z-index: 999;
 		background: lightgrey;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.dot{
+		flex: 1;
 		height: 100%;
-		background: red;
-		width: 0;
 		transition: 0.3s all ease;
 	}
 
@@ -472,13 +498,27 @@
 
 		create_array();
 
+		populate_progress_bar();
+
 		$('.Q' + question_index[current_question.toString()]).fadeIn();
+	}
+
+	function populate_progress_bar(){
+		var current_div = 1;
+
+		while ( current_div < max_length ) {
+			$('.dots').append("<div class='dot dot-" + current_div.toString() + "'></div>");
+
+			console.log(current_div);
+
+			current_div ++;
+		}
 	}
 
 	function create_array(){
 		var current_index = 1;
 
-		while ( current_index < max_length + 1 ) {
+		while ( current_index < max_length + 1) {
 			question_index.push(current_index);
 
 			current_index ++;
@@ -491,19 +531,22 @@
 
 	$('.answer').click( function(){
 
+		$('.dot-' + current_question.toString()).css('background','red');
+
 		if ( $(this).hasClass('correct') ) {
 			score ++;
+
+			$('.dot-' + current_question.toString()).css('background','lime');
 		}
 
 		current_question ++;
 
 		$('.correct').css('background','lime').delay(2000).queue(function(){
 			$(this).css('background','none').dequeue();
+
 		})
 
 		console.log("hello there");
-
-		$('.dot').css('width',((current_question/max_length)*100)+ '%');
 
 		$('.question').delay(2000).fadeOut();
 
@@ -512,7 +555,7 @@
 		$('.Q' + question_index[current_question.toString()]).delay(1000).fadeIn();
 
 		if ( current_question >= max_length ) {
-			$('.score_percent').html((score/max_length)*100);
+			$('.score_percent').html(parseInt((score/max_length)*100));
 			$('.current_score').html(score);
 			$('.max_score').html(max_length);
 			$('.score').css('top','0');
