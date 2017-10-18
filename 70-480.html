@@ -139,6 +139,18 @@
 			<div class="Q question Q37">
 				<h2>Why is checking for null a good practice?</h2>
 			</div>
+			<div class="Q question Q38">
+				<h2>Which iof the following is a valid WebSocket instantiation?</h2>
+			</div>
+			<div class="Q question Q39">
+				<h2>Which of the following statements properly handles the reception of data from a WebSocket?</h2>
+			</div>
+			<div class="Q question Q40">
+				<h2>Which list identifies the properties that need to be set up to make an AJAX call?</h2>
+			</div>
+			<div class="Q question Q41">
+				<h2>Why is wiring up events with jQuery easier?</h2>
+			</div>
 		</div>
 		<div>
 			<div class="question Q1">
@@ -359,6 +371,30 @@
 				<p class="answer correct">A. Checking for null prevents the use of an object before it's initialized.</p>
 				<p class="answer">B. Checking for null prevents errors resulting in NaN.</p>
 				<p class="answer">C. Checking for null prevents the need to throw exceptions.</p>
+			</div>
+			<div class="question Q38">
+				<p class="answer">A. wsConnection = new WebSocket('http://studygroup.70480.com');</p>
+				<p class="answer">B. wsConnection = new WebSocket('tcp://studygroup.70480.com',['soap','xmpp']);</p>
+				<p class="answer correct">C. wsConnection = new WebSocket('wss://studygroup.70480.com',['soap','xmpp']);</p>
+				<p class="answer">D. wsConnection = new WebSocket('ftp://studygroup.70480.com',['soap','xmpp']);</p>
+			</div>
+			<div class="question Q39">
+				<p class="answer">A. wsConnection.onpost = function(msg){..};</p>
+				<p class="answer">B. wsConnection.onrecieve = function(msg){..};</p>
+				<p class="answer correct">C. wsConnection.onmessage = function(msg){..};</p>
+				<p class="answer">D. wsConnection.ongetdata = function(msg){..};</p>
+			</div>
+			<div class="question Q40">
+				<p class="answer">A. <i>cache, datatype, success</i></p>
+				<p class="answer">B. <i>url, cache, datatype</i></p>
+				<p class="answer correct">C. <i>url, datatype, onsuccess</i></p>
+				<p class="answer">D. <i>url, datatype, oncomplete</i></p>
+			</div>
+			<div class="question Q41">
+				<p class="answer">A. It allows you to assign the event listener to many elements at once via the selector syntax.</p>
+				<p class="answer">B. There is no difference wiring up events with jquery versus <i>addEventListener</i> method.</p>
+				<p class="answer">C. jQuery works more efficiently in a loop.</p>
+				<p class="answer">D. jQuery allows both named and anonymous functions to be used as event listeners.</p>
 			</div>
 		</div>
 	</section>
