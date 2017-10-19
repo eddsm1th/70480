@@ -166,6 +166,30 @@
 			<div class="Q question Q46">
 				<h2>To have a script run continually every 30 seconds, which line of code should be used?</h2>
 			</div>
+			<div class="Q question Q47">
+				<h2>Which input control is better suited for allowing users to make multiple selections?</h2>
+			</div>
+			<div class="Q question Q48">
+				<h2>Which input cnotrol is design to allow users to enter secure information in a way that keeps others from seeing what's typed?</h2>
+			</div>
+			<div class="Q question Q49">
+				<h2>Which input control posts form data to a server?</h2>
+			</div>
+			<div class="Q question Q50">
+				<h2>Which of the following declerations are valid ways to make a text control non-editable?</h2>
+			</div>
+			<div class="Q question Q51">
+				<h2>How can you ensure that all necessary fields are populated before a form can be submitted?</h2>
+			</div>
+			<div class="Q question Q52">
+				<h2>Which of the followingregular expression characters denotes the end of the string?</h2>
+			</div>
+			<div class="Q question Q53">
+				<h2>Which of the following <i>sandbox</i> attributes allows the iFrame to load content from the containing HTML document?</h2>
+			</div>
+			<div class="Q question Q54">
+				<h2>Which function should never be used to run JavaScript?</h2>
+			</div>
 		</div>
 		<div>
 			<div class="question Q1">
@@ -441,6 +465,55 @@
 				<p class="answer">C. <i>setTimeout(worker.postMessage(""), 30000);</i></p>
 				<p class="answer correct">D. <i>setInterval(function(){worker.postMessage("");}, 30000);</i></p>
 			</div>
+			<div class="question Q47">
+				<p class="answer">A. <i>radio button</i></p>
+				<p class="answer">B. <i>textarea</i></p>
+				<p class="answer correct">C. <i>checkbox</i></p>
+				<p class="answer">D. <i>radio or checkbox</i></p>
+			</div>
+			<div class="question Q48">
+				<p class="answer">A. <i>text</i></p>
+				<p class="answer">B. <i>textarea</i></p>
+				<p class="answer">C. <i>url</i></p>
+				<p class="answer correct">D. <i>password</i></p>
+			</div>
+			<div class="question Q49">
+				<p class="answer">A. <i>button</i></p>
+				<p class="answer correct">B. <i>Submit</i></p>
+				<p class="answer">C. <i>Reset</i></p>
+				<p class="answer">D. <i>radio</i></p>
+			</div>
+			<div class="question Q50">
+				<p class="answer">A. <i>&lt;input type="text" edit="false"/&gt;</i></p>
+				<p class="answer">B. <i>&lt;input type="text" editable="false/"&gt;</i></p>
+				<p class="answer">C. <i>&lt;input type="text" readonly="yes"/&gt;</i></p>
+				<p class="answer correct">D. <i>&lt;input type="text" readonly/&gt;</i></p>
+			</div>
+			<div class="question Q51">
+				<p class="answer">A. Write a JavaScript function to evaluate all the controls on the form for content.</p>
+				<p class="answer">B. On the server, evaluate akk the controls and data and return an error page for missing content.</p>
+				<p class="answer correct">C. Add the <i>required</i> attribute on each control so that users get a message that the field is required.</p>
+				<p class="answer">D. Add a label to the page to let users know whic controls they must fill in.</p>
+			</div>
+			<div class="question Q52">
+				<p class="answer correct">A. $</p>
+				<p class="answer">B. %</p>
+				<p class="answer">C. ^</p>
+				<p class="answer">D. &</p>
+			</div>
+			<div class="question Q53">
+				<p class="answer">A. <i>allow-script-execution</i></p>
+				<p class="answer">B. <i>allow-same-origin</i></p>
+				<p class="answer">C. <i>allow-forms</i></p>
+				<p class="answer correct">D. <i>allow-top-navigation</i></p>
+				<p class="answer">E. <i>allow-top-document</i></p>
+			</div>
+			<div class="question Q54">
+				<p class="answer">A. <i>execute</i></p>
+				<p class="answer">B. <i>JSDynamic</i></p>
+				<p class="answer">C. <i>eval</i></p>
+				<p class="answer correct">D. <i>evaluate</i></p>
+			</div>
 		</div>
 	</section>
 	<section class="dots">
@@ -573,8 +646,6 @@
 	var question_index = [];
 
 	function init(){
-		console.log(max_length);
-	
 		$('.overlay').fadeOut(1)
 
 		create_array();
@@ -589,8 +660,6 @@
 
 		while ( current_div < max_length ) {
 			$('.dots').append("<div class='dot dot-" + current_div.toString() + "'></div>");
-
-			console.log(current_div);
 
 			current_div ++;
 		}
@@ -611,7 +680,6 @@
 	}
 
 	$('.answer').click( function(){
-
 		$('.dot-' + current_question.toString()).css('background','red');
 
 		if ( $(this).hasClass('correct') ) {
@@ -626,16 +694,14 @@
 			$(this).css('background','none').dequeue();
 
 		})
-
-		console.log("hello there");
-
+		
 		$('.question').delay(2000).fadeOut();
 
 		$('.overlay').fadeIn(1).delay(2400).fadeOut(1);
 
 		$('.Q' + question_index[current_question.toString()]).delay(1000).fadeIn();
 
-		if ( current_question >= max_length ) {
+		if ( current_question >= max_length + 1 ) {
 			$('.score_percent').html(parseInt((score/max_length)*100));
 			$('.current_score').html(score);
 			$('.max_score').html(max_length);
