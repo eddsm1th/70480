@@ -743,6 +743,8 @@
 			question_results.push(0);
 		}
 
+		$(this).addClass('chosen');
+
 		console.log(question_results);
 
 		current_question ++;
@@ -797,6 +799,13 @@
 
 		$('.correct').css({'background':'lime','pointer-events':'none'});
 		$('.answer').css('pointer-events','none');
+
+		$('.chosen').append('<span style="font-weight: bold; color: black;"> - You Chose</span>').queue(function(){
+			$(this).removeClass('chosen');
+		});
+
+		// $('.score-wrap > .Q' + current_info.toString() + ':nth-child(2) > .answer:nth-child(4)').css('background','blue');
+
 		console.log(current_info);
 	}
 </script>
