@@ -5,6 +5,11 @@
 <body onload="init()">
 	<section class="overlay"></section>
 	<section class="score">
+		<div class="score-log">
+			<div style="width: auto; margin: 0 auto; display: flex;">
+				
+			</div>
+		</div>
 		<div>
 			<h1>Score</h1>
 			<h2><span class="score_percent"></span>%</h2>
@@ -189,6 +194,15 @@
 			</div>
 			<div class="Q question Q54">
 				<h2>Which function should never be used to run JavaScript?</h2>
+			</div>
+			<div class="Q question Q55">
+				<h2>Which of the following is a valid JSON string?</h2>
+			</div>
+			<div class="Q question Q56">
+				<h2>With the <i>XMLHttpRequest</i> object, which of the following properties provides the response in a human readable form?</h2>
+			</div>
+			<div class="Q question Q57">
+				<h2>At which stage during an XMLHttpRequest are the user credentials sent to the server?</h2>
 			</div>
 		</div>
 		<div>
@@ -514,6 +528,24 @@
 				<p class="answer">C. <i>eval</i></p>
 				<p class="answer correct">D. <i>evaluate</i></p>
 			</div>
+			<div class="question Q55">
+				<p class="answer">A. {<i>firstName, Rick, lastName, Delorme, hairColour, brown, eyeColour, brown</i>}</p>
+				<p class="answer">B. {<i>firstName: "Rick"; lastName: "Delorme"; hairColour: "brown"; eyeColour: "brown"</i>}</p>
+				<p class="answer">C. {<i>firstName: Rick; lastName: Delorme; hairColour: brown; eyeColour: brown</i>}</p>
+				<p class="answer correct">D. {<i>firstName: "Rick", lastName: "Delorme", hairColour: "brown", eyeColour: "brown"</i>}</p>
+			</div>
+			<div class="question Q56">
+				<p class="answer">A. <i>Response</i></p>
+				<p class="answer">B. <i>respsonseBody</i></p>
+				<p class="answer correct">C. <i>respsonseText</i></p>
+				<p class="answer">D. <i>responseXML</i></p>
+			</div>
+			<div class="question Q57">
+				<p class="answer">A. When the connection is opened.</p>
+				<p class="answer">B. When the request is sent.</p>
+				<p class="answer">C. When the ready state is complete</p>
+				<p class="answer correct">D. When the server sends a security response requesting the credentials.</p>
+			</div>
 		</div>
 	</section>
 	<section class="dots">
@@ -566,7 +598,27 @@
 		transition: 0.3s all ease;
 	}
 
-	.score > div{
+	.score-log{
+		position: absolute;
+		width: 90%;
+		height: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		z-index: 9999999999999999999999;
+		top: calc(50% + 110px);
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.score-log_section{
+		flex: 1;
+		height: 100%;
+		max-width: 20px;
+		border-radius: 50%;
+		margin: 3px;
+	}
+
+	.score > div:nth-child(2){
 		color: white;
 		position: absolute;
 		top: 50%;
@@ -640,10 +692,11 @@
 </style>
 
 <script type="text/javascript">
-	var current_question = 1;
+	var current_question = 0;
 	var score = 0;
 	var max_length = $('.Q').length; 
 	var question_index = [];
+	var question_results = [];
 
 	function init(){
 		$('.overlay').fadeOut(1)
@@ -656,7 +709,7 @@
 	}
 
 	function populate_progress_bar(){
-		var current_div = 1;
+		var current_div = 0;
 
 		while ( current_div < max_length ) {
 			$('.dots').append("<div class='dot dot-" + current_div.toString() + "'></div>");
@@ -680,13 +733,21 @@
 	}
 
 	$('.answer').click( function(){
-		$('.dot-' + current_question.toString()).css('background','red');
+
 
 		if ( $(this).hasClass('correct') ) {
 			score ++;
 
 			$('.dot-' + current_question.toString()).css('background','lime');
+
+			question_results.push(1);
+		} else {
+			$('.dot-' + current_question.toString()).css('background','red');
+
+			question_results.push(0);
 		}
+
+		console.log(question_results);
 
 		current_question ++;
 
@@ -701,11 +762,34 @@
 
 		$('.Q' + question_index[current_question.toString()]).delay(1000).fadeIn();
 
-		if ( current_question >= max_length + 1 ) {
+		if ( current_question >= max_length ) {
+			populate_score_log();
+
 			$('.score_percent').html(parseInt((score/max_length)*100));
 			$('.current_score').html(score);
 			$('.max_score').html(max_length);
 			$('.score').css('top','0');
 		}
 	})
+
+	function populate_score_log(){
+		var score_log = 0;
+
+		while ( score_log < max_length ) {
+			var colour = get_colour(score_log);
+
+			$('.score-log > div').css('width', (26*max_length).toString() + 'px');
+			$('.score-log > div').append('<div class="score-log_section" style="background-color: ' + colour + ';"></div>');
+
+			score_log ++;
+		}
+	}
+
+	function get_colour(score_log){
+		if ( question_results[score_log] == 1 ) {
+			return 'lime';
+		} else {
+			return 'red';
+		}
+	}
 </script>
